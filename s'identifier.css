@@ -1,0 +1,6 @@
+.tot{width:600px; height:500px; margin:2cm; padding:2cm; text-align:center; margin-left:20%; box-backgroung:center; background:linear-gradient(white,grey);box-shadow:0px 0px 0px 8px rgb(191, 194, 194); border:linear-gradient(white,grey);}
+ins{font-size:1.5cm; text-align:center; vertical-align:sub; color: #256D7B;}
+.tab{width:450px; height:300px; margin:1cm;}
+.ident{width:500px; height:350px; margin:0.04cm; font-size:0.5cm; font:28px arial, sans-serif;  color:#256D7B;}
+.sub{width:150px; height:34px; font: 22px arial; cursor: pointer;}
+.in{width:250px; height:30px;}

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html><head>
+    <META name='viewport' content='width=device-width, initial-scale=1'> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/1.2.1/rangeslider.min.css">
+        <title>Smart Lighting</title>
+       
+    <script>
+    InitWebSocket()
+    function InitWebSocket(){
+      websock= new WebSocket('ws://'+window.location.hostname+':88/');
+      websock.onmessage=function(evt){
+        JSONobj=JSON.parse(evt.data);
+        document.getElementById('btn').innerHTML=JSONobj.LEDOnOff;
+        if(JSONobj.LEDOnOff=='ON')
+        {
+          document.getElementById('btn').style.background='#FFA200';
+           document.getElementById('btn').style["boxShadow"]="0px 0px 0px 8px #FFA200";}
+        else{document.getElementById('btn').body.value='92';
+           document.getElementById('btn').style["boxShadow"]="0px 0px 0px 8px #111111";
+        }
+      }
+    }
+    function button(){
+      btn='LEDOnOff=ON';
+      if(document.getElementById('btn').innerHTML =='ON')
+      {btn ='LEDOnOff=OFF';}  
+      websock.send(btn);
+    }
+    </script>
+    <style>
+    .btn{ background:linear-gradient(white,grey); color:#256D7B; font-weight:bold; width:680px;margin-left:25%; margin-top:60px;
+     box-shadow:0px 0px 0px 8px rgb(191, 194, 194); border: linear-gradient(white,grey); }
+     ins{font-size:1.5cm;  margin-left:25%;margin:2cm; padding:2cm; text-align:center; vertical-align:sub; color: #256D7B;}
+    .led1{ font:30px arial, sans-serif; height:70px; line-height:10px; margin-left:6%; margin-top:40px; text-align:center; vertical-align:middle;}
+    .led2{ font:30px arial, sans-serif; height:70px; line-height:10px; margin-left:6%; margin-top:40px; text-align:center; vertical-align:middle;}
+    .led3{ font:30px arial, sans-serif; height:70px; line-height:10px; margin-left:6%; margin-top:40px; text-align:center; vertical-align:middle;}
+    .led4{ font:30px arial, sans-serif; height:70px; line-height:10px; margin-left:6%; margin-top:40px; text-align:center; vertical-align:middle;}
+    .led5{ font:30px arial, sans-serif; height:70px; line-height:10px; margin-left:6%; margin-top:40px; text-align:center; vertical-align:middle;}
+    .led6{ font:30px arial, sans-serif; height:70px; line-height:10px; margin-left:6%; margin-top:40px; text-align:center; vertical-align:middle;}
+    meter{width:300px; padding:2px;  background-color:rgb(102, 140, 148); border:1px solid black; text-align:center}
+</style>
+    
+    </head>
+    <body> <div class="btn">
+            <ins><strong>Smart Lighting </strong> </ins>
+            <div class="led">  
+                    <div class="led1">
+                        <li> Lampe1 : <meter min="0" max="230" low="92" high="160" value="230"></meter> </li>
+                    </div>
+                    <div class="led2">
+                        <li> Lampe2 : <meter type= "range" min="0" max="230" low="92" high="160" value="150 "></meter> </li>
+                    </div>
+                    <div class="led3">
+                        <li> Lampe3 : <meter min="0" max="230" low="92" high="160" value=" 90"></meter> </li>
+                    </div>
+                    <div class="led4">
+                        <li> Lampe4 : <meter min="0" max="230" low="92" high="160" value=" 30"></meter> </li>
+                    </div>
+                    <div class="led5">
+                        <li> Lampe5 : <meter min="0" max="230" low="92" high="160" value="0"></meter> </li>
+                    </div>
+                    <div class="led6">
+                        <li> Lampe6 : <meter min="0" max="230" low="92" high="160" value=" "></meter> </li>
+                    </div>
+                    </div>
+                </body>
+</html>

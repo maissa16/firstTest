@@ -1,0 +1,259 @@
+
+<!DOCTYPE HTML>
+<html><head>
+    <META charset="utf-8" name='viewport' content='width=device-width, initial-scale=1'> 
+    
+    <link rel= "stylesheet" type="text/css" href= "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/1.2.1/rangeslider.min.css">
+        <title>Smart Lighting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/1.2.1/rangeslider.min.js"></script>
+    <style>
+        .btn{ background:linear-gradient(white,grey); color:#256D7B; 
+              font-weight:bold; width:800px; height:1280px ; margin-left:25%; margin-top:60px;
+              box-shadow:0px 0px 0px 8px rgb(191, 194, 194); border: linear-gradient(white,grey); }
+         ins{font-size:1.5cm;  margin-left:25%;margin:2.7cm; padding:2.7cm; text-align:center; vertical-align:sub; color: #256D7B;}
+        .led1{ height:135px; line-height:10px; margin-left:20%; margin-right :20%; margin-top:35px;
+               font:30px arial, sans-serif; text-align:center; }
+        .led2{ height:135px; line-height:10px; margin-left:20%; margin-right :20%; margin-top:35px; 
+               font:30px arial, sans-serif; text-align:center; }
+        .led3{ height:135px; line-height:10px; margin-left:20%; margin-right :20%; margin-top:35px; 
+               font:30px arial, sans-serif; text-align:center; }
+        .led4{ height:135px; line-height:10px; margin-left:20%; margin-right :20%; margin-top:35px;  
+               font:30px arial, sans-serif; text-align:center; }
+        .led5{ height:135px; line-height:10px; margin-left:20%; margin-right :20%; margin-top:35px; 
+               font:30px arial, sans-serif; text-align:center;}
+        .led6{ height:150px; line-height:10px; margin-left:20%; margin-right :20%; margin-top:35px;
+               font:30px arial, sans-serif; text-align:center; }
+        .toutesled{ height:135px; line-height:10px; margin-top:35px; font:30px arial, sans-serif; text-align:center; }
+        #off{background-color : red; }
+        #on{background-color : green; }
+    </style>
+
+    
+    </head>
+    <body> 
+        <div class="btn">
+            <ins><strong>Smart Lighting </strong> </ins>
+            <div class="led"> 
+                    <div class="led1">
+                        <p> Lampe1 :</p>
+                        <p><input class="range-control1" type= "range" min="0" max="230"/> </p>
+                        <p><form>
+                                <input type="number" class="input-control1" list="number" placeholder="Tension en Volt">
+                                <datalist id="number">
+                                    <option value="0">
+                                    <option value="46">
+                                    <option value="92">
+                                    <option value="160">
+                                    <option value="230">   
+                                </datalist>
+                            </input>
+                           </form>
+                        </p>
+                    </div>
+                    <div class="led2">
+                        <p> Lampe2 : </p>
+                        <p> <input class="range-control2" type= "range" min="0" max="230"/> </p>
+                        <p><form>
+                                <input type="number" class="input-control2" list="number" placeholder="Tension en Volt">
+                                    <datalist id="number">
+                                        <option value="0">
+                                        <option value="46">
+                                        <option value="92">
+                                        <option value="160">
+                                        <option value="230">   
+                                    </datalist>
+                                </input>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="led3">
+                        <p> Lampe3 : </p>
+                        <p><input class="range-control3" type= "range" min="0" max="230"/></p>
+                        <p><form>
+                                <input type="number" class="input-control3" list="number" placeholder="Tension en Volt">
+                                    <datalist id="number">
+                                        <option value="0">
+                                        <option value="46">
+                                        <option value="92">
+                                        <option value="160">
+                                        <option value="230">   
+                                    </datalist>
+                                </input>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="led4">
+                        <p> Lampe4 : </p>
+                        <p><input class="range-control4" type= "range" min="0" max="230"/> </p>
+                        <p><form>
+                                <input type="number" class="input-control4" list="number" placeholder="Tension en Volt">
+                                    <datalist id="number">
+                                        <option value="0">
+                                        <option value="46">
+                                        <option value="92">
+                                        <option value="160">
+                                        <option value="230">   
+                                    </datalist>
+                                </input>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="led5">
+                        <p> Lampe5 : </p>
+                        <p><input class="range-control5" type= "range" min="0" max="230"/> </p>
+                        <p><form>
+                                <input type="number" class="input-control5" list="number" placeholder="Tension en Volt">
+                                    <datalist id="number">
+                                        <option value="0">
+                                        <option value="46">
+                                        <option value="92">
+                                        <option value="160">
+                                        <option value="230">   
+                                    </datalist>
+                                </input>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="led6">
+                        <p> Lampe6 :</p>
+                        <p> <input class="range-control6" type= "range" min="0" max="230"/> </p>
+                        <p><form>
+                                <input type="number" class="input-control6" list="number" placeholder="Tension en Volt">
+                                    <datalist id="number">
+                                        <option value="0">
+                                        <option value="46">
+                                        <option value="92">
+                                        <option value="160">
+                                        <option value="230">   
+                                    </datalist>
+                                </input>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="toutesled">
+                            <p> Commander toutes les lampes :</p>
+                            <p><form>
+                                    <input type="number" class="input-control7" list="number" placeholder="Tension en Volt">
+                                        <datalist id="number">
+                                            <option value="0">
+                                            <option value="46">
+                                            <option value="92">
+                                            <option value="160">
+                                            <option value="230">   
+                                        </datalist>
+                                    </input>
+                                
+                                
+                                </form>
+                            </p>
+                        </div>
+                    </div>
+                
+                
+                <script>
+                        var $rangeslider1 = $(".range-control1");
+                        var $amount1 = $(".input-control1");
+                        var $rangeslider2 = $(".range-control2");
+                        var $amount2 = $(".input-control2");
+                        var $rangeslider3 = $(".range-control3");
+                        var $amount3 = $(".input-control3");
+                        var $rangeslider4 = $(".range-control4");
+                        var $amount4 = $(".input-control4");
+                        var $rangeslider5 = $(".range-control5");
+                        var $amount5 = $(".input-control5");
+                        var $rangeslider6 = $(".range-control6");
+                        var $amount6 = $(".input-control6");
+                        var $rangeslider7 = $(".range-control7");
+                        var $amount7 = $(".input-control7");
+
+                        $rangeslider1
+                          .rangeslider({
+                            polyfill: false})
+
+                          .on('input', function() {
+                            $amount1[0].value = this.value;});
+                        
+                        $amount1.on('input', function() {
+                          $rangeslider1.val(this.value).change();});
+
+                        $rangeslider2
+                          .rangeslider({
+                            polyfill: false})
+
+                          .on('input', function() {
+                            $amount2[0].value = this.value;});
+                        
+                        $amount2.on('input', function() {
+                          $rangeslider2.val(this.value).change();});
+
+                        $rangeslider3
+                          .rangeslider({
+                            polyfill: false})
+
+                          .on('input', function() {
+                            $amount3[0].value = this.value;});
+                        
+                        $amount3.on('input', function() {
+                          $rangeslider3.val(this.value).change();});
+
+                        $rangeslider4
+                          .rangeslider({
+                            polyfill: false})
+
+                          .on('input', function() {
+                            $amount4[0].value = this.value;});
+                        
+                        $amount4.on('input', function() {
+                          $rangeslider4.val(this.value).change();});
+                        
+                        $rangeslider5
+                          .rangeslider({
+                            polyfill: false})
+
+                          .on('input', function() {
+                            $amount5[0].value = this.value;});
+                        
+                        $amount5.on('input', function() {
+                          $rangeslider5.val(this.value).change();});
+
+                        $rangeslider6
+                          .rangeslider({
+                            polyfill: false})
+
+                          .on('input', function() {
+                            $amount6[0].value = this.value;});
+                        
+                        $amount6.on('input', function() {
+                          $rangeslider6.val(this.value).change();});
+
+                        $rangeslider7  
+                          .on('input', function() {
+                            $amount7[0].value = this.value;});
+                        
+                        $amount7.on('input', function() {
+                          $rangeslider7.val(this.value).change();
+                          $rangeslider6.val(this.value).change();
+                          $rangeslider5.val(this.value).change();
+                          $rangeslider4.val(this.value).change();
+                          $rangeslider3.val(this.value).change();
+                          $rangeslider2.val(this.value).change();
+                          $rangeslider1.val(this.value).change();
+                        });
+                      
+                
+                var c= document.getElementById("on");
+                function red(){
+                   c.innerText="OFF";
+                   c.setAttribute("id","off");
+                   if ($amount7[0].value==0){alert('fff');}
+                }
+                function bl(){c.setAttribute("id","on")
+                   c.innerText="ON";}
+                </script>
+            
+        </div>
+    
+    </body>
+</html>
